@@ -39,6 +39,7 @@ Now lets make a class for you to actually run. Run the following commands, verif
     $ mkdir -p src/main/java/org/life
     $ cat >> src/main/java/org/life/Life.java <<JAVA
     package org.life;
+    
     public class Life {
         public static void main( String[] args ) {
             System.out.println("Hello, world!");
