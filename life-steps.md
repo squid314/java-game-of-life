@@ -64,4 +64,4 @@ To make our building/running lives easier, I'd like to make a nice simple single
         classpath configuration.runtime
     }
 
-Now you should be able to run `gradle run` and see the compilation and execution of the program itself.
+Now you should be able to run `gradle run` on the command line and see the compilation and execution of the program.
