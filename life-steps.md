@@ -124,6 +124,6 @@ This is exacty what you want to do; IntelliJ keeps its own internal caches and i
 Select the `Import Gradle project` option in the popup; this will open a dialog to handle the importing.
 
 Most of the defaults here are fine but you will probably have to set the Gradle home for the project.
-If you installed gradle with Homebrew, you should set the Gradle home to `/usr/local/Cellar/gradle/2.8/`.
+If you installed gradle with Homebrew, you should set the Gradle home to `/usr/local/Cellar/gradle/2.8/libexec/`.
 
 
