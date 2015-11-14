@@ -59,9 +59,30 @@ You'll notie that the gradle build created a `jar` file for you in addition to c
 To make our building/running lives easier, I'd like to make a nice simple single command which builds and runs the program all at once. Fortunately, Gradle has something for this, no problem. Add the following to the end of the `build.gradle` file:
 
     task run( type: JavaExec, dependsOn: build ) {
+        description 'Executes our Game of Life program'
         main = 'org.life.Life'
         classpath sourceSets.main.runtimeClasspath
         classpath configuration.runtime
     }
 
 Now you should be able to run `gradle run` on the command line and see the compilation and execution of the program.
+
+    $ gradle run
+
+
+[//]: # Git and Github
+[//]: # --------------
+
+[//]: # *NOTE* This step can be done later or ignored entirely. It will be useful for other things.
+
+[//]: # Get a [Github](https://github.com) set up
+
+
+IntelliJ Setup
+--------------
+
+Now that we can easily run the program from the command line and are tracking changes we make, let's get set up to use the fancy-shamncy IDE. Start off by running `gradle idea`. This will set up the base IntelliJ IDEA configuration files based on the work in the gradle file and the project layout.
+
+    $ gradle idea
+
+Now, start up IntelliJ.
