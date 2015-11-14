@@ -1,7 +1,8 @@
 simple steps
 ============
 
-We will be using Gradle, IntelliJ IDEA Community Edition, and Git to run through our build. Since we're working on Mac, we will use Homebrew to ensure that we have the tools necessary for building.
+We will be using Gradle, IntelliJ IDEA Community Edition, and Git to run through our build.
+Since we're working on Mac, we will use Homebrew to ensure that we have the tools necessary for building.
 
 Verify you have the following downloaded and installed before getting started:
 
@@ -12,7 +13,8 @@ Verify you have the following downloaded and installed before getting started:
 Project Init
 ------------
 
-Start off by making a new directory to house your code for the project. All further instructions will be based on the assumption that you are working in this directory.
+Start off by making a new directory to house your code for the project.
+All further instructions will be based on the assumption that you are working in this directory.
 
     $ mkdir life
     $ cd life
@@ -20,7 +22,9 @@ Start off by making a new directory to house your code for the project. All furt
 Gradle
 ------
 
-Gradle is a build tool like Ant. Its configuration file is a Domain Specific Language (DSL) based on Groovy. This means that you are technically writing code when you are setting up your build script.
+Gradle is a build tool like Ant.
+Its configuration file is a Domain Specific Language (DSL) based on Groovy.
+This means that you are technically writing code when you are setting up your build script.
 
 Add the following to a `build.gradle` file:
 
@@ -47,16 +51,22 @@ Now lets make a class for you to actually run. Run the following commands, verif
     }
     JAVA
 
-The first command creates the directories which will hold the code for the project. The second command creates the initial main method for the application.
+The first command creates the directories which will hold the code for the project.
+The second command creates the initial main method for the application.
 Let's see if everything worked:
 
     $ gradle build
     $ java -cp build/classes/main/ org.life.Life
     $ java -cp build/libs/life.jar org.life.Life
 
-You'll notie that the gradle build created a `jar` file for you in addition to compiling the class we wrote earlier. Also note that the jar is named `life.jar`. That is because the jar file is named for the project. If you want to change the name of the project (and therefore the jar file), you can create a `settings.gradle` file and add `rootProject.name = 'other'` to the file.
+You'll notie that the gradle build created a `jar` file for you in addition to compiling the class we wrote earlier.
+Also note that the jar is named `life.jar`.
+That is because the jar file is named for the project.
+If you want to change the name of the project (and therefore the jar file), you can create a `settings.gradle` file and add `rootProject.name = 'other'` to the file.
 
-To make our building/running lives easier, I'd like to make a nice simple single command which builds and runs the program all at once. Fortunately, Gradle has something for this, no problem. Add the following to the end of the `build.gradle` file:
+To make our building/running lives easier, I'd like to make a nice simple single command which builds and runs the program all at once.
+Fortunately, Gradle has something for this, no problem.
+Add the following to the end of the `build.gradle` file:
 
     task run( type: JavaExec, dependsOn: build ) {
         description 'Executes our Game of Life program'
@@ -68,6 +78,10 @@ To make our building/running lives easier, I'd like to make a nice simple single
 Now you should be able to run `gradle run` on the command line and see the compilation and execution of the program.
 
     $ gradle run
+
+Additionally, you can run `gradle tasks` to see all of the tasks set up and you should find our `run` task at the end of the list in the `Other` section.
+
+    $ gradle tasks
 
 
 [comment]: # (Git and Github)
@@ -81,8 +95,13 @@ Now you should be able to run `gradle run` on the command line and see the compi
 IntelliJ Setup
 --------------
 
-Now that we can easily run the program from the command line and are tracking changes we make, let's get set up to use the fancy-shamncy IDE. Start off by running `gradle idea`. This will set up the base IntelliJ IDEA configuration files based on the work in the gradle file and the project layout.
+Now that we can easily run the program from the command line, let's get set up to use the fancy-shamncy IDE.
+Start off by running `gradle idea`.
+This will set up the base IntelliJ IDEA configuration files based on the work in the gradle file and the project layout.
 
     $ gradle idea
 
 Now, start up IntelliJ.
+You should be able to find an "Open..." option directly in front of you or from the "File" menu. Navigate to the `life` directory and open the project.
+You should get a new window
+
