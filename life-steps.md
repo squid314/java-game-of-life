@@ -70,12 +70,12 @@ Now you should be able to run `gradle run` on the command line and see the compi
     $ gradle run
 
 
-[comment]: # Git and Github
-[comment]: # --------------
+[comment]: # (Git and Github)
+[comment]: # (--------------)
 
-[comment]: # *NOTE* This step can be done later or ignored entirely. It will be useful for other things.
+[comment]: # (*NOTE* This step can be done later or ignored entirely. It will be useful for other things.)
 
-[comment]: # Get a [Github](https://github.com) set up
+[comment]: # (Get a [Github](https://github.com) set up)
 
 
 IntelliJ Setup
