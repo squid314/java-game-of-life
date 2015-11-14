@@ -95,7 +95,7 @@ Additionally, you can run `gradle tasks` to see all of the tasks set up and you 
 IntelliJ Setup
 --------------
 
-Now that we can easily run the program from the command line, let's get set up to use the fancy-shamncy IDE.
+Now that we can easily run the program from the command line, let's get set up to use the fancy-schmancy IDE.
 Start off by running `gradle idea`.
 This will set up the base IntelliJ IDEA configuration files based on the work in the gradle file and the project layout.
 
