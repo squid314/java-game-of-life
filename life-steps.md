@@ -54,3 +54,13 @@ Let's see if everything worked:
     $ java -cp build/libs/life.jar org.life.Life
 
 You'll notie that the gradle build created a `jar` file for you in addition to compiling the class we wrote earlier. Also note that the jar is named `life.jar`. That is because the jar file is named for the project. If you want to change the name of the project (and therefore the jar file), you can create a `settings.gradle` file and add `rootProject.name = 'other'` to the file.
+
+To make our building/running lives easier, I'd like to make a nice simple single command which builds and runs the program all at once. Fortunately, Gradle has something for this, no problem. Add the following to the end of the `build.gradle` file:
+
+    task run( type: JavaExec, dependsOn: build ) {
+        main = 'org.life.Life'
+        classpath sourceSets.main.runtimeClasspath
+        classpath configuration.runtime
+    }
+
+Now you should be able to run `gradle run` and see the compilation and execution of the program itself.
