@@ -126,4 +126,31 @@ Select the `Import Gradle project` option in the popup; this will open a dialog 
 Most of the defaults here are fine but you will probably have to set the Gradle home for the project.
 If you installed gradle with Homebrew, you should set the Gradle home to `/usr/local/Cellar/gradle/2.8/libexec/`.
 
+The project is now ready to set up a run configuration inside of IntelliJ.
+Go the the `Run` menu and select `Edit Configurations...`
+Add a new configuration with the `+` option in the top left.
+Select `Gradle` from the resulting menu; this will add a new `Unnamed` Gradle execution.
+Start off by renaming the item to `Gradle Run`.
+Select the `Single instance only` option in the top right.
+Select the `life` project we've been working on by clicking on the folder-ish icon next to the `...` button.
+Enter `run` for the tasks to run.
+That is everything; click `OK` then go back to the `Run` menu and select `Run 'Gradle Run'` to try it out.
+The first time I ran it, it took a long time to execute the first time, but subsequent runs were very fast.
+
+The run configuration set up above just executes the same thing that we were running form the command line.
+However, this won't allow debugging.
+Let's set up another config to allow debugging.
+Add another run configuration by going to the `Run` menu -> `Edit Configurations...` -> `+` and select `Application` this time.
+Rename to something like `Life`.
+For the `Main class`, type in `org.life.Life`; you may notice an auto-complete pop up while you are typing.
+That's all you need; click `OK` and run it.
+
+
+Actually Building Shit
+----------------------
+
+Now that we can build, run, and debug our project, we can get to actually building shit.
+
+TODO
+
 
