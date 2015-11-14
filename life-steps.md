@@ -26,6 +26,10 @@ Gradle is a build tool like Ant.
 Its configuration file is a Domain Specific Language (DSL) based on Groovy.
 This means that you are technically writing code when you are setting up your build script.
 
+If you haven't installed Gradle yet, go ahead and use Homebrew to install it.
+
+    $ brew install gradle
+
 Add the following to a `build.gradle` file:
 
     apply plugin: 'java'
