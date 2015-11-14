@@ -84,12 +84,12 @@ Additionally, you can run `gradle tasks` to see all of the tasks set up and you 
     $ gradle tasks
 
 
-[comment]: # (Git and Github
---------------
+[comment]: # (Git and Github)
+[comment]: # (--------------)
 
-*NOTE* This step can be done later or ignored entirely. It will be useful for other things.
+[comment]: # (*NOTE* This step can be done later or ignored entirely. It will be useful for other things.)
 
-Get a [Github](https://github.com) set up)
+[comment]: # (Get a [Github](https://github.com) set up)
 
 
 IntelliJ Setup
@@ -103,6 +103,7 @@ This will set up the base IntelliJ IDEA configuration files based on the work in
 
 Now, start up IntelliJ.
 If this is the first time you have used IntelliJ, you will probably need to configure both Gradle and Java environments.
+
 From the start screen, select the `Configure` menu and select `Project Defaults` -> `Project Structure`.
 In the dialog which pops up, find the `Platform Settings` -> `SDKs` section.
 You shouldn't have anything in here yet, so let's add some.
@@ -111,7 +112,10 @@ Most likely, you will have the latest JDK on your system automatically selected,
 Next, go to the `Project Settings` -> `Project` section and select the JDK you just set up where it says `<No SDK>` currently.
 This will default new projects to the correct JDK when you start up.
 Also select the default language level of `8 - Lambdas, type annotations, etc.`
+That should be everything for this screen.
+Select `OK` to head back to the startup screen.
 
+Now you will open the project.
 You should be able to find an "Open..." option directly in front of you or from the "File" menu.
 Navigate to the `life` directory you've been working in and open the project (select the directory and then "Open").
 You will get a new coding window set up for your project.
@@ -119,6 +123,7 @@ In the top right corner, you will probably see a prompt saying that you should l
 This is exacty what you want to do; IntelliJ keeps its own internal caches and indexes on everything in your project, so it asks to link itself to the files we already created.
 Select the `Import Gradle project` option in the popup; this will open a dialog to handle the importing.
 
-Most of the defaults here are fine.
+Most of the defaults here are fine but you will probably have to set the Gradle home for the project.
+If you installed gradle with Homebrew, you should set the Gradle home to `/usr/local/Cellar/gradle/2.8/`.
 
 
