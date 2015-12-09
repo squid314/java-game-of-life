@@ -76,7 +76,7 @@ Add the following to the end of the `build.gradle` file:
         description 'Executes our Game of Life program'
         main = 'org.life.Life'
         classpath sourceSets.main.runtimeClasspath
-        classpath configuration.runtime
+        classpath configurations.runtime
     }
 
 Now you should be able to run `gradle run` on the command line and see the compilation and execution of the program.
